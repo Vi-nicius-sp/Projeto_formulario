@@ -18,7 +18,8 @@ formulario = new FormGroup({
 //Validators 
 nome: new FormControl('', [Validators.required,Validators.minLength(3)]),
 idade: new FormControl(null,[Validators.required,Validators.min(0),Validators.max(120)]),
-cidade: new FormControl('',[Validators.required,Validators.minLength(3)] )
+cidade: new FormControl('',[Validators.required,Validators.minLength(3)] ),
+sexo: new FormControl('Masculino',[Validators.required])
 
 })
 
@@ -51,7 +52,8 @@ selecionar(indice: number){
   this.formulario.setValue({
     nome: this.vetor[this.indice].nome,
     idade: this.vetor[this.indice].idade,
-    cidade: this.vetor[this.indice].cidade
+    cidade: this.vetor[this.indice].cidade,
+    sexo:this.vetor[this.indice].sexo
   });
 
   //visibilidade dos botões
